@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>John Rommel Oidem</title>
   </head>
   <body><nav>
@@ -34,7 +34,7 @@
       <div id="skill-grid">
         <div class="skill-card">
           <h2>Data</h2>
-          <p>SQL, Python(NumPy, Pandas, SciPy, Scikit-learn)</p>
+          <p>SQL, Python(NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, Seaborn)</p>
         </div>
         <div class="skill-card">
           <h2>GPU-accelerated parallel processing</h2>
@@ -62,6 +62,16 @@
       <h1>Education</h1>
       <div class="timeline">
         <div class="timeline-entry">
+          <h2>Master of Science in Physics</h2>
+          <h3>University of the Philippines Diliman</h3>
+          <p>2022-2024</p>
+          <ul>
+            <li>GWA: 1.18/1.00</li>
+            <li>Excellence in Graduate Studies</li>
+            <li>Thesis: Chaos and Escapes of Charged Particles Orbiting Uniformly Magnetized Gravitational Centers</li>
+          </ul>
+        </div>
+        <div class="timeline-entry">
           <h2>Bachelor of Science in Physics</h2>
           <h3>University of the Philippines Diliman</h3>
           <p>2018-2022</p>
@@ -69,16 +79,6 @@
             <li>GWA: 1.31/1.00</li>
             <li>Magna Cum Laude</li>
             <li>Thesis: Charged Particle Dynamics Around a Uniformly Magnetized Newtonian Center</li>
-          </ul>
-        </div>
-        <div class="timeline-entry">
-          <h2>Master of Science in Physics</h2>
-          <h3>University of the Philippines Diliman</h3>
-          <p>2022-2024</p>
-          <ul>
-            <li>GWA: 1.31/1.00</li>
-            <li>Excellence in Graduate Studies</li>
-            <li>Thesis: Chaos and Escapes of Charged Particles Orbiting Uniformly Magnetized Gravitational Centers</li>
           </ul>
         </div>
       </div>
@@ -91,8 +91,10 @@
           <h3>University of the Philippines Diliman, National Institute of Physics</h3>
           <p>2021-2024</p>
           <ul>
-            <li>GANAP research group, under the Gravity Subgroup</li>
-            <li>Chaotic dynamics of charged particles around magnetized black holes</li>
+            <li>Part of the GANAP research group, under the Gravity Subgroup.</li>
+            <li>Worked on Dynamical Systems Modeling and Chaotic Dynamics for a Relativistic system.</li>
+            <li>Developed and optimized numerical simulations in Python improved by Numba JIT-compilation and GPU-accelerated parallel programming with CUDA.</li>
+            <li>Presented findings with the use of matplotlib, LaTeX, and Manim, a Python based mathematical animations library.</li>
           </ul>
         </div>
         <div class="timeline-entry">
@@ -100,9 +102,9 @@
           <h3>University of the Philippines Diliman, National Institute of Physics</h3>
           <p>2022-2024</p>
           <ul>
-            <li>Lectured college-level Physics</li>
-            <li>lab classes</li>
-            <li>something</li>
+            <li>Lectured undergraduate Physics (Newtonian Mechanics, Electromagnetism, Optics, Special Relativity, Quantum Mechanics, and Thermodynamics).</li>
+            <li>Supervised physics laboratory classes on circuits, magnetism and optics, integrating data processing, analysis and visualization.</li>
+            <li>Co-developed several exams and analytical methods for students grades. Developing algorithms to provide students with grade projections.</li>
           </ul>
         </div>
       </div>
@@ -137,10 +139,11 @@
           <div class="project-info">
             <h2>Wordle Clone</h2>
             <p>A Wordle remake built to explore the basics of React.</p>
+            <p><strong>Tech:</strong> JavaScript, WebGL, GLSL</p>
           </div>
         </a>
     </div>
   </div>
-  <script type="module" src="/src/gameOfLife/gameOfLife.js"></script>
+  <script type="module" src="./src/gameOfLife/gameOfLife.js"></script>
   </body>
 </html>

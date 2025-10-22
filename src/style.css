@@ -25,8 +25,6 @@ body {
     min-height: 100%;
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: "Roboto", sans-serif;
     text-align: center;
     color:var(--text);
@@ -107,7 +105,7 @@ h2{
 #skill-grid{
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap:0.5rem;
 }
 .skill-card{
@@ -138,7 +136,7 @@ h2{
 #project-grid{
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap:0.5rem;
 }
 .project-card{
@@ -189,5 +187,4 @@ ul {
 }
 .timeline-entry > * {
     margin:0;
-    /*text-align: left;*/
 }

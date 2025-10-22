@@ -162,7 +162,7 @@ function rgbToHex(r,g,b){
 
 initGl(
     canvas,
-    await gl2Utils.loadShader("/vertexShader.glsl"),
-    await gl2Utils.loadShader("/renderShader.glsl"),
-    await gl2Utils.loadShader("/simulShader.glsl")
+    await gl2Utils.loadShader("./shaders/vertexShader.glsl"),
+    await gl2Utils.loadShader("./shaders/renderShader.glsl"),
+    await gl2Utils.loadShader("./shaders/simulShader.glsl")
 );
