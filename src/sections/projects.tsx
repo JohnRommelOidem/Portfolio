@@ -12,7 +12,7 @@ function ProjectCard({data}:{data:ProjectData}){
     return (
         <Link to={data.link}>
             <div className="card project-card">
-                <img src={`/thumbnails/${data.image}.webp`} alt={`${data.name} thumbnail`} />
+                <img src={`${import.meta.env.BASE_URL}thumbnails/${data.image}.webp`} alt={`${data.name} thumbnail`} />
                 <h2>{data.name}</h2>
                 <p>{data.description}</p>
                 <p className="tech"><strong>Tech:</strong>{data.tech}</p>
