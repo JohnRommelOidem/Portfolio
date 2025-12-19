@@ -1,0 +1,221 @@
+
+.project-content{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    overflow: hidden;
+}
+
+.content-half{
+    width:50%;
+    position: relative;
+    touch-action: none;
+}
+.content-half > * {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+}
+
+.content-half:nth-child(1)>canvas{
+    border-right: 0.5px solid white;
+}
+.content-half:nth-child(2)>canvas{
+    border-left: 0.5px solid white;
+}
+.content-half:nth-child(1).left{
+    transform: translateX(-100%);
+}
+.content-half:nth-child(1).right>*{
+    width:200%;
+}
+.content-half:nth-child(2).left>*{
+    width:200%;
+    transform: translateX(-50%);
+}
+.content-half:nth-child(2).right{
+    transform: translateX(100%);
+}
+
+.outer-cursor{
+    cursor:grab;
+    stroke:white;
+    stroke-width: 2px;
+    fill:rgba(0, 0, 0, 0.5);
+    r:15;
+}
+.outer-cursor:active{
+    cursor:grabbing;
+}
+.cursor-center{
+    fill:white;
+    r:2;
+    pointer-events: none;
+}
+.control-container{
+    position:absolute;
+    right:0;
+    bottom:0;
+    background-color: var(--text);
+    margin:0.5rem;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.control-container i{
+    color:var(--bg);
+}
+
+.control-min{
+    border:none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height:1.5rem;
+    padding: 0;
+    margin:0;
+    cursor:pointer;
+}
+.control-minimized:hover{
+    filter:brightness(0.8)
+}
+.control-content{
+    width:8em;
+    display:flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.slider-row{
+    background-color: var(--bg);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+.slider-label-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+.slider-input{
+    flex:1;
+    min-width: 1rem;
+    border: none;
+    background-color: inherit;
+    font:inherit;
+}
+.slider-row-slider{
+    width:100%;
+    cursor:pointer;
+}
+
+.button-row{
+    font-weight: bolder;
+    font-size: 1rem;
+    background-color: var(--bg);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border: none;
+    cursor:pointer;
+    transition: background-color 0.5s ease;
+}
+.button-row:hover{
+    background-color: var(--secondary-dark);
+}
+
+.collapse-buttons{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%) translateY(20%);
+    width:4rem;
+    height:2rem;
+    margin:0;
+    padding:0;
+}
+.collapse-buttons button{
+    border:none;
+    width:50%;
+    height:100%;
+    margin:0;
+    padding:0;
+    outline: none;
+}
+.collapse-buttons button:hover{
+    filter:brightness(0.8);
+    cursor:pointer;
+}
+.collapse-buttons button:nth-child(1){
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-right: 1px solid white;
+}
+.collapse-buttons button:nth-child(2){
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    border-left: 1px solid white;
+}
+.collapse-buttons.left{
+    left:0;
+}
+.collapse-buttons.right{
+    left:100%;
+}
+@container (max-aspect-ratio: 1/1){
+    .project-content {
+        flex-direction: column;
+    }
+    .content-half{
+        height:50%;
+        width:100%;
+    }
+
+    .content-half:nth-child(1)>canvas{
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+    .content-half:nth-child(2)>canvas{
+        border-left: none;
+        border-top: 1px solid white;
+    }
+    
+    .content-half:nth-child(1).left{
+        transform: translateY(-100%);
+    }
+    .content-half:nth-child(1).right>*{
+        height:200%;
+        width:100%;
+    }
+    .content-half:nth-child(2).left>*{
+        height:200%;
+        width:100%;
+        transform: translateY(-50%);
+    }
+    .content-half:nth-child(2).right{
+        transform: translateY(100%);
+    }
+
+    .collapse-buttons{
+        transform:translateY(-50%) rotate(90deg) translateY(30%);
+        left:0;
+        top:50%;
+    }
+    
+    .collapse-buttons.left{
+        top:0;
+    }
+    .collapse-buttons.right{
+        top:100%;
+        left:0%;
+    }
+}
