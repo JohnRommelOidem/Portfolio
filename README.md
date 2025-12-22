@@ -1,27 +1,3 @@
+# Portfolio Site
 
-# Portfolio
-
-A personal portfolio website showcasing projects and skills.
-
-## About
-
-This is a portfolio page designed to be viewed directly in the browser. It is not intended for download or installation via GitHub.
-
-## Features
-
-- Clean, responsive design
-- Project showcase
-- Skills overview
-- Contact information
-
-## Viewing
-
-Open the project files in your browser to view the portfolio.
-
-## Technologies
-
-Built with HTML, CSS, and TypeScript.
-
----
-
-*This project is a portfolio website and does not require any installation or dependencies.*
+This repository contains the source code for my portfolio website hosted via Github Pages linked [here](https://johnrommeloidem.github.io/Portfolio/)
